@@ -4,6 +4,7 @@
 
 # Ignore Integrated Development Environment files
 .vscode/
+.databricks/
 
 # Ignore venv folders
 venv/

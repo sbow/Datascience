@@ -1,0 +1,64 @@
+
+{
+    "name": "copy_HdMap_from_prem_to_adls",
+    "properties": {
+        "activities": [
+            {
+                "name": "GetAlevelFolders",
+                "type": "GetMetadata",
+                "dependsOn": [],
+                "policy": {
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "dataset": {
+                        "referenceName": "SourceDataset_HdMapRelease_Sandbox",
+                        "type": "DatasetReference"
+                    },
+                    "fieldList": [
+                        "childItems"
+                    ],
+                    "referenceName": "SourceDataset_HdMapRelease_Sandbox",
+                    "type": "DatasetReference",
+                    "storeSettings": {
+                        "type": "AmazonS3CompatibleReadSettings",
+                        "recursive": true,
+                        "enablePartitionDiscovery": false
+                    },
+                    "formatSettings": {
+                        "type": "BinaryReadSettings"
+                    }
+                }
+            }
+        ],
+        "concurrency": 1,
+        "variables": {
+            "matchingCsvFound": {
+                "type": "Boolean",
+                "defaultValue": false
+            },
+            "currentAlevelFolder": {
+                "type": "String"
+            },
+            "currentBlevelFolder": {
+                "type": "String"
+            },
+            "destinationAlevelFolder": {
+                "type": "String"
+            },
+            "destinationBlevelFolder": {
+                "type": "String"
+            }
+        },
+        "folder": {
+            "name": "mot"
+        },
+        "annotations": [],
+        "lastPublishTime": "2023-09-01T21:33:03Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}
