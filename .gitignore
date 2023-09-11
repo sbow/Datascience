@@ -1,0 +1,36 @@
+#
+# Shaun's Basic Git Ignore
+#
+
+# Ignore Integrated Development Environment files
+.vscode/
+
+# Ignore venv folders
+venv/
+env/
+*.venv
+Pipfile.lock
+.python-version
+
+# Ignore log and database files
+*.log
+*.sqlite
+*.sqlite3
+
+# Ignore compiled files
+*.pyc
+#.pyo
+__pycache__/
+dist/
+build/
+*.egg-info/
+
+# Ignore os and editor specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore temporary and backup files
+*.swp
+*~
+
