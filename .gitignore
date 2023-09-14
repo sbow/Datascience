@@ -34,4 +34,5 @@ desktop.ini
 # Ignore temporary and backup files
 *.swp
 *~
+*test*.py
 

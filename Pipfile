@@ -59,8 +59,10 @@ ujson = "*"
 wheel = "*"
 zipp = "*"
 torch = "*"
+databricks-connect = "*"
 
 [dev-packages]
+localstack = "*"
 
 [requires]
 python_version = "3.10"
