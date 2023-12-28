@@ -36,3 +36,17 @@ desktop.ini
 *~
 *test*.py
 
+# Ignore potential proprietary files
+notebooks/GM_meetings/
+
+# Ignore localstack's S3 storage emulation volume
+volume/
+
+# Ignore apache spark-py container folders
+spark-logs/
+spark-worker/
+spark-data/
+
+# Dont distribute environment variables w passwords
+datascience_shell.env
+
